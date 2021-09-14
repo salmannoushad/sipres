@@ -1,0 +1,325 @@
+@media only screen and (max-width: 1200px) {
+  .containers {
+    width: auto;
+  }
+  .containers .titles h2 {
+    font-size: 30px;
+  }
+  .output .title h3 {
+    font-size: 23px;
+  }
+  .output .haveNeed p {
+    font-size: 16px;
+  }
+
+  form {
+    padding: 5px 10px 5px 5px;
+  }
+  .form .info-1 {
+    line-height: 29px;
+    font-size: 20px;
+  }
+  .form .info-1 input {
+    width: 90px;
+  }
+  form .button-input {
+    grid-template-columns: 35px 135px 35px;
+  }
+  form .button-input input {
+    height: 28px;
+  }
+}
+
+/* Max Width 1300px and container 1000px */
+@media only screen and (max-width: 1050px) {
+  .containers {
+    width: auto;
+  }
+  .containers .titles h2 {
+    font-size: 30px;
+  }
+  .output .title h3 {
+    font-size: 23px;
+  }
+  .output .haveNeed p {
+    font-size: 16px;
+  }
+
+  form {
+    padding: 5px 10px 5px 5px;
+  }
+  .form .info-1 {
+    line-height: 29px;
+    font-size: 20px;
+  }
+  .form .info-1 input {
+    width: 90px;
+  }
+  form .button-input {
+    grid-template-columns: 35px 135px 35px;
+  }
+  form .button-input input {
+    height: 28px;
+  }
+  .output .haveNeed {
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 100px 100px 350px;
+    /* grid-template-columns: 100px 100px; */
+    grid-gap: 20px;
+    /* justify-content: center; */
+    /* align-items: end; */
+    /* width: 881px; */
+  }
+}
+@media only screen and (max-width: 950px) {
+  .containers {
+    width: 100% !important;
+  }
+  .form {
+    margin-left: 5px;
+  }
+  .form .info-1 {
+    font-size: 18px;
+  }
+  .form .info-1 input {
+    font-size: 18px;
+    width: 80px;
+  }
+  .output .title h3 {
+    font-size: 21px;
+  }
+  .horizontal-progress .move {
+    font-size: 17px;
+  }
+  .horizontal-progress .all-bar > div {
+    padding: 12px 0px 6px 0px;
+    font-size: 16px;
+  }
+  .horizontal-progress .describe h3 {
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .imgss {
+    margin-left: 40px !important;
+  }
+
+  .output .haveNeed {
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 70px 70px 330px;
+    /* grid-template-columns: 100px 100px; */
+    grid-gap: 20px;
+    /* justify-content: center; */
+    /* align-items: end; */
+    /* width: 881px; */
+  }
+  .sub-container .output {
+    /* grid-column: 2/-1; */
+    /* margin-left: 20px; */
+
+    padding: 0 !important;
+  }
+  /* .output .need-bar {
+    margin-left: -20px;
+  } */
+
+  .imageUpper .mx-auto {
+    margin-left: 20px !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .output .haveNeed {
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 70px 70px 2.5fr !important;
+    /* grid-template-columns: 100px 100px; */
+    grid-gap: 10px;
+    /* justify-content: center; */
+    /* align-items: end; */
+    /* width: 881px; */
+  }
+  .containers .sub-container {
+    grid-gap: 0px;
+  }
+  .imageUpper {
+    align-items: unset !important;
+    margin-top: -10px;
+    margin-left: -10px;
+  }
+
+  .imageUpper .mx-auto {
+    margin-left: 20px !important;
+    margin-right: 0 !important;
+  }
+  .imageUpper .img-fluid {
+    height: 400px !important;
+    width: 315px !important;
+  }
+  .have p .element.style {
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+  }
+  .containers {
+    width: 100%;
+  }
+  .containers .titles {
+    margin-top: 20px;
+  }
+  .containers .titles h2 {
+    font-size: 26px;
+  }
+  .containers .titles p {
+    font-size: 15px;
+  }
+  .containers .hidden-informations {
+    padding: 20px;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 22px;
+  }
+  .containers .sub-container {
+    grid-template-columns: 1.3fr 2fr;
+  }
+  .form .info-1 {
+    font-size: 17px;
+  }
+  .form .info-1 .input-div:first-child input {
+    width: 36px;
+  }
+  .form .info-1 input {
+    font-size: 17px;
+    width: 74px;
+  }
+  form h5 {
+    font-size: 14px;
+  }
+  form .info-3 .info-3-part1 h4 {
+    font-size: 17px;
+  }
+  form .button-input input {
+    font-size: 16px;
+    height: 24px;
+  }
+  form .button-input button {
+    font-size: 11px;
+  }
+  .output .title h3 {
+    font-size: 17px;
+  }
+  .output .haveNeed {
+    grid-template-columns: 110px 110px;
+  }
+  .output .haveNeed p {
+    font-size: 15px;
+  }
+  .output .have-amount,
+  .output .need-amount {
+    font-size: 16px;
+  }
+  .horizontal-progress .describe h3 {
+    font-size: 19px;
+  }
+  .horizontal-progress .all-bar > div {
+    font-size: 15px;
+  }
+  .move .content {
+    min-width: 150px;
+    font-size: 16px;
+    padding: 2px 0px;
+  }
+  .imgss {
+    height: 484px;
+    width: 699px;
+  }
+  .titles h2 {
+    text-align: center !important;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .containers {
+    width: auto;
+    padding: 20px 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .containers .sub-container {
+    display: block;
+    height: auto;
+  }
+  .sub-container .output {
+    height: auto;
+  }
+  form {
+    padding: 5px 10px 5px 10px;
+  }
+  .form {
+    background-color: #f4f4f4;
+  }
+  .imgss {
+    height: 325px;
+    width: 431px;
+  }
+  .titles h2 {
+    text-align: center !important;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .containers {
+    padding: 20px;
+  }
+  .containers .titles h2 {
+    font-size: 23px;
+  }
+  .output .haveNeed {
+    grid-template-columns: 95px 95px;
+  }
+  .output .have-amount,
+  .output .need-amount {
+    font-size: 15px;
+  }
+  .output .haveNeed p {
+    font-size: 14px;
+  }
+  .horizontal-progress .all-bar > div {
+    font-size: 14px;
+  }
+  .horizontal-progress .describe h3 {
+    font-size: 18px;
+  }
+  .horizontal-progress .describe p {
+    font-size: 14px;
+    color: #353535;
+  }
+  .imgss {
+    height: 285px;
+    width: 264px;
+  }
+  .titles h2 {
+    text-align: center !important;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .containers {
+    padding: 10px;
+  }
+  form {
+    padding: 5px;
+  }
+  form > div {
+    margin-bottom: 5px;
+  }
+  .titles h2 {
+    text-align: center !important;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <title>SIP Calculator</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div style="background-color: #383834">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <a href="https://ucbaml.com/">
+              <img
+                src="images/ucbaml_logo-1024x304.png"
+                class="navbar-brand"
+                alt=""
+                style="height: 67px"
+                width="245px"
+            /></a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"> </span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav ml-right">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="https://www.webportal.ucbaml.com/auth/login"
+                    style="
+                      color: #fff;
+                      font-size: 16px;
+                      border: 1px solid red;
+                      border-radius: 25px;
+                      margin-right: 12px;
+                      height: 40px;
+                      width: 120px;
+                      text-align: center;
+                      margin-top: 5px;
+
+                      font-family: 'Lato', sans-serif;
+
+                      font-weight: 400;
+                    "
+                    >INVEST NOW</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="http://retirementcalculator.ucbaml.com/"
+                    style="
+                      color: #fff;
+                      font-size: 16px;
+                      border: 1px solid red;
+                      border-radius: 25px;
+                      margin-right: 12px;
+                      height: 40px;
+                      width: 230px;
+                      text-align: center;
+                      margin-top: 5px;
+                      font-family: 'Lato', sans-serif;
+
+                      font-weight: 400;
+                    "
+                    >RETIREMENT CALCULATOR</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="https://ucbaml.com/"
+                    style="
+                      color: #fff;
+                      font-size: 18px;
+                      margin-top: 5px;
+                      font-family: 'Lato', sans-serif;
+
+                      font-weight: 400;
+                    "
+                    >HOME <i class="fas fa-home"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="containers">
+      <div class="sub-container">
+        <div class="form" style="background-color: #383834">
+          <form id="form">
+            <div class="titles">
+              <h2>SIP Calculator</h2>
+              <!-- <p>
+                Tell us a few things about yourself and this calculator will show
+                whether you're on track for the retirement you want.
+              </p> -->
+            </div>
+            <!-- Info Section 01 -->
+            <div class="info-1" style="background-color: #4b4b47">
+              <!-- I am
+              <div class="input-div">
+                <input type="number" id="age" value="25" />
+              </div>
+              years old,  -->
+              I have a monthly income of BDT
+              <div class="input-div">
+                <!-- <input type="number" id="yearlyIncome" value="200000"> -->
+                <input
+                  type="number"
+                  id="monthlyIncome"
+                  value="50000"
+                  style="width: 100px !important"
+                  onkeydown="return (event.keyCode!=13)"
+                />
+              </div>
+              Taka
+              <hr style="margin-top: 10px; margin-bottom: 10px" />
+
+              Initial 'Bullet' investment amount of BDT
+              <div class="input-div">
+                <input
+                  type="number"
+                  id="currentSavings"
+                  value="100000"
+                  onkeydown="return (event.keyCode!=13)"
+                />
+              </div>
+              Taka.
+              <small class="errors currAgeError"></small>
+              <small class="errors monthlyIncomeError"></small>
+              <small class="errors currentSavingError"></small>
+            </div>
+
+            <!-- Info Section 02 -->
+            <div class="info-2" style="background-color: #4b4b47; color: #fff">
+              <div class="monthly-savings">
+                <h5 style="text-align: center">
+                  SIP Installment Amount per Month (BDT):
+                </h5>
+                <!-- Input with decrement and increment button -->
+                <div class="button-input">
+                  <div class="decrement">
+                    <button
+                      class="decrease"
+                      style="border-radius: 07px 0px 0px 7px"
+                    >
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                  <input
+                    style="
+                      background-color: #fff;
+                      color: black;
+                      font-family: 'Lato', sans-serif !important;
+                    "
+                    type="number"
+                    id="monthlySavings"
+                    value="5000"
+                    onkeydown="return (event.keyCode!=13)"
+                  />
+                  <div class="increment">
+                    <button
+                      class="increase"
+                      style="border-radius: 0px 7px 7px 0px"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+                <small
+                  class="incomePercent"
+                  style="font-family: 'Lato', sans-serif !important"
+                  >10% of my monthly income</small
+                >
+                <small class="errors monthlySaveError"></small>
+              </div>
+            </div>
+
+            <div class="info-3" style="background-color: #4b4b47; color: #fff">
+              <!-- part2 collapse or open button -->
+              <!-- <div class="info-3-part1">
+                <h4>Optional</h4>
+                <button><i class="fas fa-chevron-up"></i></button>
+              </div> -->
+
+              <!-- It will be collapse by default -->
+              <div class="info-3-part2 hidden">
+                <!-- Retirement age -->
+                <div class="retire-age">
+                  <h5
+                    style="
+                      text-align: center;
+                      font-family: 'Lato', sans-serif !important;
+                    "
+                  >
+                    Investment Tenure (Years):
+                  </h5>
+                  <div class="button-input">
+                    <div class="decrement">
+                      <button
+                        class="decrease"
+                        style="border-radius: 07px 0px 0px 7px"
+                      >
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                    <input
+                      style="font-family: 'Lato', sans-serif !important"
+                      type="number"
+                      id="retireAge"
+                      value="10"
+                      onkeydown="return (event.keyCode!=13)"
+                    />
+                    <div class="increment">
+                      <button
+                        class="increase"
+                        style="border-radius: 0px 7px 7px 0px"
+                      >
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <small class="errors retireAgeError"></small>
+                </div>
+                <!-- Monthly Retirement Spending Input -->
+                <!-- <div class="monthly-spending">
+                  <h5>Monthly Expense after Retirement (BDT):</h5>
+                  <div class="button-input">
+                    <div class="decrement">
+                      <button class="decrease">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                    <input type="number" id="monthlySpendings" value="50000" />
+                    <div class="increment">
+                      <button class="increase">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <small class="errors monthlyRetirementSpendingError"></small>
+                </div> -->
+
+                <!-- Life expectancy/Death Age -->
+                <!-- <div class="death-age">
+                  <h5>Life Expectancy:</h5>
+                  <div class="button-input">
+                    <div class="decrement">
+                      <button class="decrease">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                    <input type="number" id="deathAge" value="72" />
+                    <div class="increment">
+                      <button class="increase">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <small class="errors deathAgeError"></small>
+                </div> -->
+
+                <!-- Investment Rate of Return -->
+                <div class="investment-rate">
+                  <h5
+                    style="
+                      text-align: center;
+                      font-family: 'Lato', sans-serif !important;
+                    "
+                  >
+                    Expected Rate of Return (%)
+                  </h5>
+                  <div class="button-input">
+                    <div class="decrement">
+                      <button
+                        class="decrease"
+                        style="border-radius: 07px 0px 0px 7px"
+                      >
+                        <i class="fas fa-minus"></i>
+                      </button>
+                    </div>
+                    <input
+                      style="font-family: 'Lato', sans-serif !important"
+                      type="number"
+                      id="investmentRate"
+                      value="12.0"
+                      step="any"
+                      onkeydown="return (event.keyCode!=13)"
+                    />
+                    <div class="increment">
+                      <button
+                        class="increase"
+                        style="border-radius: 0px 7px 7px 0px"
+                      >
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <small class="errors investmentRateError"></small>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="output">
+          <!-- Vertically Up Down progress bar -->
+          <div class="verticale-progress">
+            <div class="title">
+              <h3>
+                Value of Your Investment <br />
+                <span style="margin-left: 40px">after</span>
+                <span
+                  class="retireAgeShow"
+                  style="font-family: 'Lato', sans-serif !important"
+                  >10</span
+                >
+                Years:
+              </h3>
+            </div>
+
+            <!-- This div has all bar element -->
+            <div class="haveNeed">
+              <!-- You will have bar -->
+              <div class="need" style="margin-top: 100px">
+                <div class="need-bar">
+                  <div class="need-amount">0.70M</div>
+
+                  <div class="sub-need-bar"></div>
+                </div>
+                <p
+                  style="
+                    font-family: 'Lato', sans-serif;
+                    font-size: 18px;
+                    font-weight: 700;
+                  "
+                >
+                  Total Investment Amount
+                </p>
+              </div>
+              <div class="have" style="margin-top: 100px">
+                <!-- Main Bar -->
+                <div class="have-bar">
+                  <!-- Amount Show -->
+                  <div class="have-amount">1.43M</div>
+                  <!-- Sub bar -->
+                  <div class="sub-have-bar"></div>
+                </div>
+                <p class="expectedvalue">Expected Value of Investment</p>
+              </div>
+              <div class="imageUpper">
+                <img
+                  src="images/Salman.jpeg"
+                  alt=""
+                  class="imgss img-fluid rounded mx-auto d-block"
+                />
+              </div>
+
+              <!-- You will need bar -->
+            </div>
+            <hr />
+          </div>
+          <!-- <div>
+            <img src="" alt="" />
+          </div> -->
+
+          <div>
+            <p
+              style="
+                border: 1px solid red;
+                margin: 10px;
+                padding: 10px;
+                color: red;
+                text-align: center;
+                font-weight: bold;
+                font-family: 'Lato', sans-serif !important;
+              "
+            >
+              ইউসিবির ওপেন-এন্ড ফান্ডের SIP Scheme এ বিনিয়োগের ক্ষেত্রে Compound
+              Annual Growth Rate (CAGR) ১২% হিসাবে টাকার পরিমাণ গণনা করা হয়েছে ।
+              প্রকৃত টাকার পরিমাণ অর্থনীতি ও পুঁজিবাজারের উপর নির্ভর করে ভিন্ন
+              হতে পারে ।
+              <br />
+              <br />
+              পুঁজিবাজারে বিনিয়োগ ঝুঁকিপূর্ণ । জেনে ও বুঝে বিনিয়োগ করুন ।
+              <br />
+              <br />
+              Mutual Fund investments are subject to market risks, read all
+              scheme related documents carefully.<br />
+            </p>
+          </div>
+          <!-- Horizontally Progress bar -->
+          <div class="horizontal-progress" style="display: none">
+            <!-- Title of the div -->
+            <div class="title">
+              <h3>Retirement Planning Score:</h3>
+            </div>
+            <!-- Move bar -->
+            <div class="score-bars">
+              <!-- It will move during progress -->
+              <div class="move">
+                <div class="space"></div>
+                <div class="content">
+                  You're <span class="percent">54%</span> to your goal.
+                </div>
+              </div>
+              <!-- Icon -->
+              <!-- <div class="icon">
+                            <i class="fas fa-sort-down"></i>
+                        </div> -->
+              <div class="icon">
+                <div class="iconSpace"></div>
+                <div class="iconContent">
+                  <i class="fas fa-sort-down"></i>
+                </div>
+              </div>
+              <!-- Four Score Bar -->
+              <div class="all-bar">
+                <div class="attention">Needs Attention</div>
+                <div class="onWay">On Your Way</div>
+                <div class="gettingClose">Getting Close</div>
+                <div class="onTrack">On Track</div>
+              </div>
+              <div class="describe">
+                <div class="attention-describe hidden">
+                  <h3>
+                    Let's get your future
+                    <span class="color"> out of the red zone. </span>
+                  </h3>
+                  <p>
+                    Better late than never. A disciplined investment style can
+                    still get you to your desired financial destination. Invest
+                    in our ‘Bullet SIP Program’ to build your wealth and find an
+                    opportunity to grow your dough.
+                  </p>
+                </div>
+                <div class="onWay-describe hidden">
+                  <h3>
+                    Solid start, but let's
+                    <span class="color">close the gap.</span>
+                  </h3>
+                  <p>
+                    You’re off to the races, but have some catching up to do.
+                    Invest in our ‘Bullet SIP Program’ to build your wealth to
+                    stay on top of your personal finances.
+                  </p>
+                </div>
+                <div class="gettingClose-describe">
+                  <h3>
+                    You're close. Let's
+                    <span class="color">get you on track.</span>
+                  </h3>
+                  <p>
+                    Just a few finishing touches and you'll be on your way.
+                    Invest in our ‘Bullet SIP Program’ to build your wealth and
+                    find an opportunity to grow your dough.
+                  </p>
+                </div>
+                <div class="onTrack-describe hidden">
+                  <h3>
+                    You're rocking it. Can you
+                    <span class="color">boost it even more?</span>
+                  </h3>
+                  <p>
+                    Could your future be any brighter? Let’s find out. Invest in
+                    our ‘Bullet SIP Program’ to build your wealth to stay on top
+                    of your personal finances.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="hideIt"></span>
+    <script src="app.js"></script>
+    <!-- Developer: Md. Abu Salman 
+    Contact Me: https://www.linkedin.com/in/md-abu-salman-4043401b8/
+
+    or
+
+    fb.com/salman.fci
+    Phone No: 01638137520
+
+    -->
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script type="text/javascript">
+      window.addEventListener(
+        "keydown",
+        function (e) {
+          if (
+            e.keyIdentifier == "U+000A" ||
+            e.keyIdentifier == "Enter" ||
+            e.keyCode == 13
+          ) {
+            if (e.target.nodeName == "INPUT" && e.target.type == "text") {
+              e.preventDefault();
+              return false;
+            }
+          }
+        },
+        true
+      );
+    </script> -->
+  </body>
+</html>
