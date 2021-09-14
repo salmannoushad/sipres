@@ -429,7 +429,7 @@ small.errors {
 }
 
 .imgss {
-  height: 560px;
+  height: 665px !important;
   width: 449px;
 }
 
@@ -448,5 +448,20 @@ small.errors {
 .lekha{
   width: 370px;
   margin-left: -52px;
-  margin-top: -220px;
+  margin-top: -270px;
+}
+
+.lekhaRes{
+  border: 1px solid red;
+  margin: 10px;
+  padding: 10px;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif !important;
+}
+
+.afterInvest{
+  margin-left: 50px; font-family: 'Lato', sans-serif
 }
