@@ -12,7 +12,7 @@
   .lekha {
     width: 370px;
     margin-left: -52px;
-    margin-top: -300px;
+    margin-top: -330px;
   }
 }
 
@@ -69,12 +69,23 @@
   }
 }
 
-/* @media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1330px) {
   .img-fluid {
-    height: 770px !important;
+    height: 700px !important;
+  }
+}
+@media only screen and (max-width: 1266px) {
+  .img-fluid {
+    height: 700px !important;
+    width: 380px !important;
+  }
+}
+/* @media only screen and (max-width: 1247px) {
+  .img-fluid {
+    height: 700px !important;
+    width: 380px !important;
   }
 } */
-
 /* Max Width 1300px and container 1000px */
 @media only screen and (max-width: 1050px) {
   .containers {
@@ -122,7 +133,7 @@
   }
 
   .img-fluid {
-    height: 800px !important;
+    height: 830px !important;
     width: 450px !important;
   }
 
