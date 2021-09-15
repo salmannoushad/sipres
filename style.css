@@ -449,17 +449,19 @@ small.errors {
   width: 370px;
   margin-left: -52px;
   margin-top: -270px;
+  font-family: 'Lato', sans-serif !important;
 }
 
 .lekhaRes{
   border: 1px solid red;
   margin: 10px;
   padding: 10px;
-  color: red;
+  color: black;
   text-align: center;
-  font-weight: bold;
-  font-size: 14px;
+  
+  font-size: 16px;
   font-family: 'Lato', sans-serif !important;
+  border-radius: 20px;
 }
 
 .afterInvest{

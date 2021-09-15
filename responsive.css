@@ -2,6 +2,18 @@
   .investementTitle2 {
     display: none !important;
   }
+  .imgss {
+    height: 670px !important;
+    width: 449px;
+  }
+  .output .title h3 {
+    margin-left: -10px !important;
+  }
+  .lekha {
+    width: 370px;
+    margin-left: -52px;
+    margin-top: -300px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -13,6 +25,7 @@
   }
   .output .title h3 {
     font-size: 23px;
+    margin-left: -34px;
   }
   .output .haveNeed p {
     font-size: 16px;
@@ -109,8 +122,8 @@
   }
 
   .img-fluid {
-    height: 720px !important;
-    width: 460px !important;
+    height: 800px !important;
+    width: 450px !important;
   }
 
   .imageUpper .mx-auto {
@@ -118,7 +131,7 @@
     margin-right: 0 !important;
   }
   .output .title h3 {
-    margin-left: -20px;
+    margin-left: -40px;
   }
 
   .lekha {
